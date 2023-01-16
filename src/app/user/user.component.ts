@@ -21,10 +21,6 @@ export class UserComponent {
   ) {}
 
   ngOnInit(): void {
-    setTimeout(() => {
-      this.loader = false;
-    }, 1000);
-
     this.router.params.subscribe(
       (params) => (this.username = params['username'])
     );
@@ -32,6 +28,7 @@ export class UserComponent {
     this.userService.getRepoData(this.username).subscribe({
       next: (data) => {
         this.repoApiResponse = data;
+        this.loader = false;
       },
       error: (err) => {
         this.routerRedirect.navigate(['no/such/repo']);
