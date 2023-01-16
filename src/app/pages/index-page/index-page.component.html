@@ -1,7 +1,9 @@
-<form>
-    <input [(ngModel)]="username" type="text" name="username">
-    <button [routerLink]="[username]" class="btn btn-primary" type="button">
-        Fetch Repositories
-    </button>
-</form>
+<div class="indexForm">
+    <form>
+        <input [(ngModel)]="username" type="text" name="username" placeholder="Enter Username.."><br><br>
+        &nbsp;&nbsp;<button [routerLink]="[username]" class="btn btn-primary" type="button">
+            Fetch Repositories
+        </button>
+    </form>
+</div>
 <router-outlet></router-outlet>

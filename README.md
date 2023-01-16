@@ -1,7 +1,9 @@
 # Setting up the frontend
 
 Clone the repository
+
 Navigate to the frontend directory
+
 Install the dependencies using `npm install`
 
 ## Development server
