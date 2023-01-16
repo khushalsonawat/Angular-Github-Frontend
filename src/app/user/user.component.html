@@ -1,0 +1,13 @@
+<div class="spinner-grow text-primary loader" style="width: 3rem; height: 3rem;" role="status" *ngIf="loader">
+    <span class="visually-hidden">Loading...</span>
+</div>
+
+<div *ngIf="!loader" class="repoPage">
+    <app-user-detail [userApiResponse]="userApiData"></app-user-detail>
+    <div class="userRepositories">
+        <h3>Repositories</h3>
+        <div *ngFor="let repo of repoApiResponse">
+            <app-repositories [repoApiResponse]="repo"></app-repositories>
+        </div>
+    </div>
+</div>

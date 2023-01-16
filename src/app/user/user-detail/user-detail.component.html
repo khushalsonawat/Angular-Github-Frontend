@@ -1,0 +1,16 @@
+<div class="userProfile">
+    <div class="topRow">
+        <app-user-avatar [image]="userApiResponse['avatar']"></app-user-avatar>
+        <fa-icon style="font-size: 19px;" [icon]="github"></fa-icon>
+        &nbsp; <a [href]="userApiResponse['profile_url']">https://www.github.com/{{userApiResponse['username']}}</a>
+    </div>
+    <div class="bottomRow">
+        <app-user-name [userName]="userApiResponse['name']"></app-user-name>
+        <app-user-bio [bio]="userApiResponse['bio']"></app-user-bio>
+        <app-user-location [location]="userApiResponse['location']"></app-user-location>
+        <app-user-social-media-handles [twitterHandle]="userApiResponse['twitter_username']"
+            [email]="userApiResponse['email']">
+            [blog]="userApiData['blog']">
+            ></app-user-social-media-handles>
+    </div>
+</div>

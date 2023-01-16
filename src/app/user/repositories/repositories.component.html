@@ -1,0 +1,6 @@
+<div class="repository">
+    <a [href]="repoApiResponse['url']" target="_blank"><app-repo-title
+            [title]="repoApiResponse['title']"></app-repo-title></a>
+    <app-repo-description [description]="repoApiResponse['description']"></app-repo-description>
+    <app-repo-tags [topics]="repoApiResponse['topics']"></app-repo-tags>
+</div>

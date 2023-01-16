@@ -1,0 +1,16 @@
+<div *ngIf="twitterHandle">
+    <a style="color: #55acee;" [href]="twitter_url" role="button">
+        <fa-icon [icon]="twitter"></fa-icon>
+        &nbsp;{{twitterHandle}}
+    </a>
+</div>
+<div *ngIf="email">
+    <a href="#!" role="button">
+        &nbsp; <fa-icon [icon]="mail"></fa-icon>
+    </a>{{email}}
+</div>
+<div *ngIf="blog">
+    <a href="#!" role="button">
+        &nbsp; <fa-icon [icon]="link"></fa-icon>
+    </a>{{blog}}
+</div>

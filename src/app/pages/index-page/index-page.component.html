@@ -1,0 +1,7 @@
+<form>
+    <input [(ngModel)]="username" type="text" name="username">
+    <button [routerLink]="[username]" class="btn btn-primary" type="button">
+        Fetch Repositories
+    </button>
+</form>
+<router-outlet></router-outlet>
