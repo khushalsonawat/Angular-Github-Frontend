@@ -15,9 +15,11 @@ export class UserSocialMediaHandlesComponent {
   link = faLink;
   mail = faEnvelope;
   twitter = faTwitter;
-  twitter_url!: string;
+  twitter_url?: string;
+  email_url?: string;
 
   ngOnInit() {
     this.twitter_url = `https://twitter.com/${this.twitterHandle}`;
+    this.email_url = `mailto:${this.email}`;
   }
 }

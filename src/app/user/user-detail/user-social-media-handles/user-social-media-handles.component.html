@@ -5,12 +5,14 @@
     </a>
 </div>
 <div *ngIf="email">
-    <a href="#!" role="button">
+    <a [href]="email_url" target="_blank" role="button">
         &nbsp; <fa-icon [icon]="mail"></fa-icon>
-    </a>{{email}}
+        {{email}}
+    </a>
 </div>
 <div *ngIf="blog">
-    <a href="#!" role="button">
+    <a [href]="blog" role="button">
         &nbsp; <fa-icon [icon]="link"></fa-icon>
-    </a>{{blog}}
+        {{blog}}
+    </a>
 </div>
