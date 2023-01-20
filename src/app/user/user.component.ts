@@ -25,22 +25,22 @@ export class UserComponent {
       (params) => (this.username = params['username'])
     );
 
-    this.userService.getRepoData(this.username).subscribe({
-      next: (data) => {
-        this.repoApiResponse = data;
-        this.loader = false;
-      },
-      error: (err) => {
-        this.routerRedirect.navigate(['no/such/repo']);
-      },
-    });
-
     this.userService.getUserData(this.username).subscribe({
       next: (data) => {
         this.userApiData = data;
       },
       error: (err) => {
         this.routerRedirect.navigate(['no/such/repo']);
+      },
+    });
+
+    this.userService.getRepoData(this.username).subscribe({
+      next: (data) => {
+        this.repoApiResponse = data;
+        this.loader = false;
+      },
+      error: (err) => {
+        this.routerRedirect.navigate(['no/such/user']);
       },
     });
   }
