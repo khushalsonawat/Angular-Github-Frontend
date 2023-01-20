@@ -7,6 +7,8 @@ import { userInfo } from '../user-detail/user';
   providedIn: 'root',
 })
 export class GetUsersService {
+  url1 = 'http://localhost:8000';
+  url2 = 'https://angular-github-backend-production.up.railway.app';
   constructor(private http: HttpClient) {}
 
   getUserData(username: string) {
